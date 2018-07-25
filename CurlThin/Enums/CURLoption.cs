@@ -15,19 +15,29 @@ namespace CurlThin.Enums
     [SuppressMessage("ReSharper", "InconsistentNaming")]
     public enum CURLoption : uint
     {
-        /* This is the FILE * or void * the regular output should be written to. */
+        /// <summary>
+        /// This is the FILE * or void * the regular output should be written to.
+        /// </summary>
         WRITEDATA = CURLOPTTYPE.OBJECTPOINT + 1,
 
-        /* The full URL to get/put */
+        /// <summary>
+        /// The full URL to get/put
+        /// </summary>
         URL = CURLOPTTYPE.STRINGPOINT + 2,
 
-        /* Port number to connect to, if other than default. */
+        /// <summary>
+        /// Port number to connect to, if other than default.
+        /// </summary>
         PORT = CURLOPTTYPE.LONG + 3,
 
-        /* Name of proxy to use. */
+        /// <summary>
+        /// Name of proxy to use
+        /// </summary>
         PROXY = CURLOPTTYPE.STRINGPOINT + 4,
 
-        /* "user:password;options" to use when fetching. */
+        /// <summary>
+        /// "user:password;options" to use when fetching.
+        /// </summary>
         USERPWD = CURLOPTTYPE.STRINGPOINT + 5,
 
         /* "user:password" to use with proxy. */
@@ -41,8 +51,10 @@ namespace CurlThin.Enums
         /* Specified file stream to upload from (use as input): */
         READDATA = CURLOPTTYPE.OBJECTPOINT + 9,
 
-        /* Buffer to receive error messages in, must be at least CURL_ERROR_SIZE
-         * bytes big. If this is not used, error messages go to stderr instead: */
+        /// <summary>
+        /// Buffer to receive error messages in, must be at least CURL_ERROR_SIZE
+        /// bytes big. If this is not used, error messages go to stderr instead:
+        /// </summary>
         ERRORBUFFER = CURLOPTTYPE.OBJECTPOINT + 10,
 
         /* Function that will be called to store the output (instead of fwrite). The
@@ -103,8 +115,10 @@ namespace CurlThin.Enums
         /* Set cookie in request: */
         COOKIE = CURLOPTTYPE.STRINGPOINT + 22,
 
-        /* This points to a linked list of headers, struct curl_slist kind. This
-           list is also used for RTSP (in spite of its name) */
+        /// <summary>
+        /// This points to a linked list of headers, struct curl_slist kind. This
+        /// list is also used for RTSP (in spite of its name)
+        /// </summary>
         HTTPHEADER = CURLOPTTYPE.OBJECTPOINT + 23,
 
         /* This points to a linked list of post entries, struct curl_httppost */

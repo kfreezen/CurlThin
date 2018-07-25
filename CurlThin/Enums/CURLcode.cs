@@ -8,9 +8,16 @@ namespace CurlThin.Enums
     [SuppressMessage("ReSharper", "InconsistentNaming")]
     public enum CURLcode : uint
     {
+        /// <summary>
+        /// 0. All fine. Proceed as usual.
+        /// </summary>
         OK = 0,
 
-        /// <summary>1</summary>
+        /// <summary>
+        /// 1. The URL you passed to libcurl used a protocol that this libcurl does not support. The support might be a
+        /// compile-time option that you didn't use, it can be a misspelled protocol string or just a protocol libcurl
+        /// has no code for.
+        /// </summary>
         UNSUPPORTED_PROTOCOL,
 
         /// <summary>2</summary>
@@ -79,7 +86,9 @@ namespace CurlThin.Enums
         /// <summary>21 - quote command failure</summary>
         QUOTE_ERROR,
 
-        /// <summary>22</summary>
+        /// <summary>
+        /// 22 This is returned if CURLOPT_FAILONERROR is set TRUE and the HTTP server returns an error code that is >= 400.
+        /// </summary>
         HTTP_RETURNED_ERROR,
 
         /// <summary>23</summary>
